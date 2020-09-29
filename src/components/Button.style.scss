@@ -1,0 +1,21 @@
+.btn-cta {
+    text-align: center;
+    display: inline-block;
+    border: none;
+    background-color: #000;
+    color: #fff;
+    padding: 12px 24px;
+    font-size: 11px;
+    letter-spacing: 2;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+
+    &:hover {
+    color: #000;
+    background-color: #DFDFDF;
+    transform: translateY(-3px);
+    }
+}
