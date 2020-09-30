@@ -8,10 +8,10 @@ import close from '../../assets/shared/mobile/close.svg';
 
 
 import { MenuItems } from './MenuItems';
-import { Button } from '../Button.component';
+import Button from '../Button.component';
 // import Button from '../Button.component';
 
-export class Navbar extends Component {
+class Navbar extends Component {
     state = {clicked: false};
     
     handleClick = () => {
@@ -39,7 +39,7 @@ export class Navbar extends Component {
                             )    
                         })}
                     </ul>
-                    <Button type="submit">Get an invite</Button>
+                    <Button className="btn-cta" type="submit">Get an invite</Button>
                 </nav>
             </header>
         )
