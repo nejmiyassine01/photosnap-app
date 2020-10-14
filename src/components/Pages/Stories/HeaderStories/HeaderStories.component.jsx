@@ -18,6 +18,7 @@ function HeaderStories() {
                         <p className="headerStories__content--span">by John Appleseed</p>
                     </div>
                     <p className="headerStories__content--text">The dissected plateau area, while not actually made up of geological mountains, is popularly called "mountains," especially in eastern Kentucky and West Virginia, and while the ridges are not high, the terrain is extremely rugged.</p>
+
                     <Button>Read the story</Button>
                 </div>
             </div>
