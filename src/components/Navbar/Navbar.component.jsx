@@ -1,17 +1,16 @@
 import React, { Component } from 'react';
-
-import './Navbar.style.scss';
+import { Link } from "react-router-dom";
 
 import logo from '../../assets/shared/desktop/logo.svg';
 import menu from '../../assets/shared/mobile/menu.svg';
 import close from '../../assets/shared/mobile/close.svg';
 
-
 import { MenuItems } from './MenuItems';
 import Button from '../Button.component';
-// import Button from '../Button.component';
 
-class Navbar extends Component {
+import './Navbar.style.scss';
+
+class Navbar extends Component {    
     state = {clicked: false};
     
     handleClick = () => {
@@ -20,28 +19,28 @@ class Navbar extends Component {
     
     render() {
         return (
-            <header>
-                <nav className="NavbarItems">
-                    <div className="NavbarLogo">
-                        <img src={logo} alt="PHOTOSNAP" />
-                    </div>
+            <nav className="NavbarItems">
+                <Link to="/" className="NavbarLogo">
+                    <img src={logo} alt="PHOTOSNAP" />
+                </Link>
 
-                    <div className="Navbar-icon" onClick={this.handleClick}>
-                        <img src={this.state.clicked ? close : menu} alt="Menu" />
-                    </div>
-                    
-                    <ul className={this.state.clicked ? "nav-menu active" : "nav-menu"}>
-                        { MenuItems.map((item, index) => {
-                            return (
-                                <li key={index}>
-                                    <a className={item.cName} href={item.url}>{item.title}</a>
-                                </li>
-                            )    
-                        })}
-                    </ul>
+                <div className="Navbar-icon" onClick={this.handleClick}>
+                    <img src={this.state.clicked ? close : menu} alt="Menu" />
+                </div>
+                
+                <ul className={this.state.clicked ? "nav-menu active" : "nav-menu"}>
+                    { MenuItems.map((item, index) => {
+                        return (
+                            <li key={index}>
+                                <Link className={item.cName} to={item.url}>{item.title}</Link>
+                            </li>
+                        )
+                    })}
+
                     <Button className="btn-cta" type="submit">Get an invite</Button>
-                </nav>
-            </header>
+                </ul>
+                
+            </nav>
         )
     }
 }

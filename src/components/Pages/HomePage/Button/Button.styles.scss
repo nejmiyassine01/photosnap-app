@@ -1,0 +1,53 @@
+$--white: #fff; 
+$--dark: #000; 
+
+.btn--white--solid {
+    color: $--white;
+
+    & svg {
+
+        g {
+            stroke: $--white;
+        }
+    }
+}
+
+.btn--dark--solid {
+    color: $--dark;
+
+    & svg {
+        
+        g {
+            stroke: $--dark;
+        }
+    }
+}
+
+.btnCta__link {
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    // color: #fff;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    padding-top: 10px;
+    transition: all .3s ease-in-out;
+    
+    &:hover {
+        text-decoration: underline;
+        letter-spacing: 2.2px;
+
+        svg {
+            margin-left: 10px;
+        }
+    }
+    
+    svg {
+        margin-left: 20px;
+        margin-bottom: 3px;
+        transition: all .3s ease-in-out;
+        
+    }
+}

@@ -1,5 +1,5 @@
 import React from 'react'
-// import './Button.style.scss';
+import { Link } from 'react-router-dom'
 import './Button.style.scss'
 
 const Button = ({
@@ -9,7 +9,7 @@ const Button = ({
     onClick
 }) => {
     return (
-        <a href="#GetAnInvite" className={className} onClick={onClick} type={type}>{children}</a>
+        <Link to="#" className={className} onClick={onClick} type={type}>{children}</Link>
     )
 }
 

@@ -1,15 +1,33 @@
 import React from 'react';
+
 import Navbar from './components/Navbar/Navbar.component';
+import HomePage from './components/Pages/HomePage/HomePage.component';
+import Footer from './components/Footer/Footer.component';
+
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
+
+import Stories from '../src/components/Pages/Stories/Stories.component';
+import Features from '../src/components/Pages/Features/Features.component';
+import Pricing from '../src/components/Pages/Pricing/Pricing.component';
 
 import './App.css';
-import Hero from './components/HeroSec/Hero.component';
 
 function App() {
   return (
-    <div className="App">
+    <Router>
       <Navbar />
-      <Hero />
-    </div>
+      <Switch>
+        <Route exact path="/" component={HomePage}/>
+        <Route path="/stories" component={Stories} />
+        <Route path="/features" component={Features} />
+        <Route path="/pricing" component={Pricing} /> 
+      </Switch>
+      <Footer />
+    </Router>
   );
 }
 

@@ -1,0 +1,189 @@
+.plan {
+    height: auto;
+    margin: 0 10px;
+
+    &__box {
+        height: 450px;
+        max-width: 30vw;
+        background-color: #F5F5F5;
+        
+        @media (max-width: 1200px) {
+            height: 300px;
+            max-width: 900px;
+        }
+
+        @media (max-width: 750px) {
+            height: 400px;
+        }
+    }
+
+    &__pro {
+        height: 500px;
+        max-width: 30vw;
+        color: #fff;
+        background-color: #000;
+        position: relative;
+
+
+        @media (max-width: 1200px) {
+            height: 300px;
+            max-width: 900px;
+            margin: 20px auto;
+        }
+
+        @media (max-width: 750px) {
+            height: 400px;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 7px;
+            background: linear-gradient(27deg, rgb(255, 197, 147) 0%, rgb(188, 113, 152) 49%, rgb(90, 119, 255) 95%);
+
+            @media (max-width: 1200px) {
+                width: 7px;
+                height: 100%;
+            }
+
+            @media (max-width: 750px) {
+                height: 7px;
+                width: 100%;
+            }
+
+        }
+    }
+
+    &__container {
+        position: relative;
+        height: 100%;
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0 40px;
+
+        @media (max-width: 1200px) {
+            padding: 70px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        @media (max-width: 750px) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+    }
+    
+    &__content {
+        width: 100%;
+        text-align: center;
+
+        @media (max-width: 1200px) {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            max-width: 50%;
+        }
+
+        @media (max-width: 750px) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100%;
+            max-width: 100%;
+        }
+        
+        & h3 {
+            font-size: 24px;
+
+            @media (max-width: 1200px) {
+                text-align: start;
+            }
+
+            @media (max-width: 750px) {
+                text-align: center;
+            }
+        }
+
+        & > p {
+            margin: 20px 0;
+            line-height: 1.6;
+            opacity: .8;
+            font-size: 14px;
+            
+            @media (max-width: 1200px) {
+                text-align: start;
+            }
+
+            @media (max-width: 750px) {
+                text-align: center;
+            }
+        }
+    }
+
+    &__month {
+        text-align: center;
+        margin: 35px auto;
+
+        @media (max-width: 1200px) {
+            margin: 0;
+        }
+
+        @media (max-width: 750px) {
+            padding-bottom: 50px;
+        }
+
+        & > p {
+            font-size: 35px;
+            font-weight: 700;
+            letter-spacing: 3px;
+        }
+
+        & > span {
+            font-size: 14px;
+            opacity: .9;
+        }
+    }
+
+    &__link {
+        position: absolute;
+        left: 10%;
+        top: 80%;
+        display: block;
+        margin: auto;
+        padding: 15px;
+        text-decoration: none;
+        text-transform: uppercase;
+        width: 80%;
+        height: 40px;
+        text-align: center;
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 2px;
+        transition: color .3s ease-in-out, background-color .3s ease-in-out;
+
+        &--pro {
+            color: #000;
+            background-color: #fff;
+        }
+        
+        &--basic {
+            color: #fff;
+            background-color: #000;
+        }
+
+        &:hover {
+            background-color: #DFDFDF;
+            color: #000;
+        }
+    }
+}
