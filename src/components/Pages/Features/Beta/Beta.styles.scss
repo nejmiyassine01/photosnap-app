@@ -9,14 +9,17 @@
     justify-content: space-between;
     font-size: 12px;
     position: relative;
+    height: 300px;
 
     @media (max-width: 901px) {
         padding: 60px;
     }
 
-    @media (max-width: 660px) {
+    @media (max-width: 700px) {
         display: block;
-        padding: 50px 30px 80px 30px;
+        text-align: center;
+        padding: 30px 10px;
+        height: 200px;
     }
 
     & h2 {
@@ -28,14 +31,25 @@
 
         @media (max-width: 901px) {
             font-size: 25px;
-            max-width: 300px;
+            width: 100%;
         }
 
-        @media (max-width: 660px) {
-            max-width: 600px;
-            margin: 15px 0;
-            font-size: 28px;
+        @media (max-width: 700px) {
+            width: 100%;
+            margin: 15px auto;
+            font-size: 20px;
             font-weight: 700;
+        }
+
+        @media (max-width: 700px) {
+            font-size: 16px;
+        }
+        
+    }
+
+    & a {
+        @media (max-width: 700px) {
+            justify-content: center;
         }
     }
 
@@ -47,7 +61,7 @@
         width: 7px;
         background: linear-gradient(27deg, rgb(255, 197, 147) 0%, rgb(188, 113, 152) 49%, rgb(90, 119, 255) 95%);
 
-        @media (max-width: 660px) {
+        @media (max-width: 700px) {
             width: 20%;
             height: 7px;
             top: 0;

@@ -9,7 +9,7 @@
 
     @media only screen and (max-width: 1024px) {
         flex-direction: column;
-        margin: 50px auto;
+        margin: 30px auto;
         padding: 0;
         max-width: 90%;
     }
@@ -26,11 +26,10 @@
             flex-direction: column;
             width: 80%;
             flex: 33%;
-            margin: 20px auto;
+            margin: 15px auto;
         }
     }
 
-    
     &__img {
         height: 100px;
         display: flex;

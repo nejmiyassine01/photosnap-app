@@ -20,5 +20,9 @@
 
     &__img {
         height: 200px;
+
+        @media (max-width: 1024px) {
+            height: 100px;
+        }
     }
 }
